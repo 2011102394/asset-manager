@@ -4,9 +4,7 @@ import com.arsc.asset.common.core.domain.result.AjaxResult;
 import com.arsc.asset.system.entity.SysUser;
 import com.arsc.asset.system.service.ISysUserService;
 import jakarta.annotation.Resource;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -23,4 +21,13 @@ public class SysUserController {
 		return AjaxResult.success(users);
 	}
 
+	@PostMapping
+	public AjaxResult add(@RequestBody SysUser user){
+		boolean save = userService.saveUserDetails(user);
+		if(save){
+			return AjaxResult.success("新增用户成功");
+		}else{
+			return AjaxResult.error("新增用户失败");
+		}
+	}
 }

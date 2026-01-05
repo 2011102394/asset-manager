@@ -4,10 +4,10 @@ spring:
   profiles:
     active:
     - dev
-  security:
-    user:
-      name: admin
-      password: 123456
+#  security:
+#    user:
+#      name: admin
+#      password: 123456
 server:
   port: 8081
 # mybatis-plus 配置
