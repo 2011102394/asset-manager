@@ -4,5 +4,23 @@ spring:
   profiles:
     active:
     - dev
+  security:
+    user:
+      name: admin
+      password: 123456
 server:
   port: 8081
+# mybatis-plus 配置
+mybatis-plus:
+  # 搜索指定包名
+  type-aliases-package: com.arsc.asset.**.domain
+  # 配置mapper的扫描
+  mapper-locations: classpath*:mapper/**/*Mapper.xml
+  configuration:
+    map-underscore-to-camel-case: true
+  global-config:
+    db-config:
+      # 数据库配置
+      id-type: auto
+      # 开启SQL日志
+      banner: false
