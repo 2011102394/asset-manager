@@ -65,4 +65,7 @@ logging:
     level:
       # 设置Mapper包的日志级别为debug，以便输出SQL语句
       com.arsc.asset.system.mapper: debug
-      
+      # 设置spring框架的日志级别，方便调试
+#      org:
+#        springframework:
+#          security: DEBUG

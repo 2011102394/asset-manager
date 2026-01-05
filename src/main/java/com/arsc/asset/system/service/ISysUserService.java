@@ -3,6 +3,7 @@ package com.arsc.asset.system.service;
 import java.util.List;
 
 import com.arsc.asset.system.entity.SysUser;
+import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
  * 
@@ -11,17 +12,7 @@ import com.arsc.asset.system.entity.SysUser;
  * @author zhangcj
  * @date 2026-01-05 09:06:33
  */
-public interface ISysUserService {
+public interface ISysUserService extends IService<SysUser> {
 
-	/**
-	 * 
-	 * @MethodName: selectUserList
-	 * @Description: 查询用户列表
-	 * @author zhangcj
-	 * @param user
-	 * @return List<SysUser>
-	 * @date 2026-01-05 09:31:41
-	 */
-	List<SysUser> selectUserList(SysUser user);
 
 }
